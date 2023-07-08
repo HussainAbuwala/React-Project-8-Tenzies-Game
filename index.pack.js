@@ -425,6 +425,21 @@ function App() {
         tenzies = _React$useState4[0],
         setTenzies = _React$useState4[1];
 
+    var _React$useState5 = _react2.default.useState(0),
+        _React$useState6 = _slicedToArray(_React$useState5, 2),
+        rolls = _React$useState6[0],
+        setRolls = _React$useState6[1];
+
+    var _React$useState7 = _react2.default.useState(Date.now()),
+        _React$useState8 = _slicedToArray(_React$useState7, 2),
+        duration = _React$useState8[0],
+        setDuration = _React$useState8[1];
+
+    var prevBestDuration = localStorage.getItem('bestDuration');
+    if (!prevBestDuration || prevBestDuration && duration < prevBestDuration) {
+        localStorage.setItem('bestDuration', duration);
+    }
+
     _react2.default.useEffect(function () {
         var allHeld = dice.every(function (die) {
             return die.isHeld;
@@ -435,6 +450,9 @@ function App() {
         });
         if (allHeld && allSameValue) {
             setTenzies(true);
+            setDuration(function (prevDuration) {
+                return Math.floor((Date.now() - prevDuration) / 1000);
+            });
         }
     }, [dice]);
 
@@ -461,9 +479,14 @@ function App() {
                     return die.isHeld ? die : generateNewDie();
                 });
             });
+            setRolls(function (prevRoll) {
+                return prevRoll + 1;
+            });
         } else {
             setTenzies(false);
             setDice(allNewDice());
+            setRolls(0);
+            setDuration(Date.now());
         }
     }
 
@@ -500,10 +523,43 @@ function App() {
             { className: "instructions" },
             "Roll until all dice are the same. Click each die to freeze it at its current value between rolls."
         ),
+        prevBestDuration && prevBestDuration < 1000 && !tenzies && _react2.default.createElement(
+            "h3",
+            { className: "prev-best" },
+            "Previous Best: ",
+            prevBestDuration,
+            " seconds"
+        ),
         _react2.default.createElement(
             "div",
             { className: "dice-container" },
             diceElements
+        ),
+        tenzies && _react2.default.createElement(
+            "div",
+            { className: "stats-container" },
+            _react2.default.createElement(
+                "h3",
+                { className: "stats-roll" },
+                "Number of Rolls to finish: ",
+                rolls
+            ),
+            _react2.default.createElement(
+                "h3",
+                { className: "stats-duration" },
+                "Time to finish: ",
+                duration,
+                " seconds"
+            ),
+            duration < prevBestDuration ? _react2.default.createElement(
+                "h3",
+                { className: "new-best" },
+                "New Personal Best Set: " + duration + " seconds"
+            ) : _react2.default.createElement(
+                "h3",
+                { className: "prev-best" },
+                "Previous Personal Best Stands: " + prevBestDuration + " seconds"
+            )
         ),
         _react2.default.createElement(
             "button",
