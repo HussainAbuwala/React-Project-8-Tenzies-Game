@@ -22,10 +22,10 @@ $ npm run watch
 ```
 
 ## How to play the game
-- **Task Management**: Add, edit, and delete tasks. Mark tasks as complete or assign priorities.
-- **Categories**: Organize tasks into categories for better organization and filtering.
-- **Reminders**: Set reminders for important tasks to stay on top of your schedule.
-- **Collaboration**: Share tasks and collaborate with team members.
+- **Die Fix**: Each Die can be fixed by clicking on it. If a Die is fixed, it will turn green in colour. To undo, click again.
+- **Roll**: Clicking the roll button will generate random die for all the unfixed dies.
+- **Confetti**: If you successfully change all dies to the same number, the game finishes and confetti falls.
+- **Game Stats**: If you were able to beat your previous best time, it will show a message highlighted in green. Else, it will be highlighted in red.
 
 ## Tools & Languages Used
 
