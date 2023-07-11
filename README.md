@@ -5,7 +5,7 @@ The world’s fastest game! Everyone gets ten dice. Someone says, “Go.” Then
 ![ezgif com-video-to-gif](https://github.com/HussainAbuwala/React-Project-8-Tenzies-Game/assets/77569166/2017e94c-1e1d-497a-8cd3-bd342e0a4b67)
 
 
-Quick start:
+## Quick start:
 
 ```
 $ yarn # npm install
