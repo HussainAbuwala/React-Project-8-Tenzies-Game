@@ -2,6 +2,9 @@
 
 The world’s fastest game! Everyone gets ten dice. Someone says, “Go.” Then everyone rolls and rolls as fast as they can until someone gets all their dice on the same number and shouts “TENZI.” Lots of different ways to play. A fun fast frenzy for the whole family! Each user can save their best time and then try to beat it in subsequent attempts.
 
+![ezgif com-video-to-gif](https://github.com/HussainAbuwala/React-Project-8-Tenzies-Game/assets/77569166/2017e94c-1e1d-497a-8cd3-bd342e0a4b67)
+
+
 Quick start:
 
 ```
