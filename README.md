@@ -1,4 +1,6 @@
-# co82b48eab99c792f6b884857
+# Tenzies Game
+
+The world’s fastest game! Everyone gets ten dice. Someone says, “Go.” Then everyone rolls and rolls as fast as they can until someone gets all their dice on the same number and shouts “TENZI.” Lots of different ways to play. A fun fast frenzy for the whole family! Each user can save their best time and then try to beat it in subsequent attempts.
 
 Quick start:
 
@@ -15,14 +17,15 @@ Run Webpack in watch-mode to continually compile the JavaScript as you work:
 $ yarn watch # npm run watch
 ```
 
-## About Scrimba
+## Tools & Languages Used
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+1. HTML5
+2. CSS3
+3. JavaScript
+4. React
+5. localStorage
+6. webpack
+7. GitHub
+8. netlify
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
 
-Happy Coding!
